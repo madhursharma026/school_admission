@@ -29,6 +29,50 @@
     body {
         overflow-x: hidden;
     }
+
+    .bgImage {
+        background-image: url('https://www.msmnyc.edu/wp-content/uploads/2020/07/48931752423_ad940485a5_k-1.jpeg');
+        height: 80vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bgImage::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: 65px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 1024px) {
+        .bgImage::after {
+            height: 73%;
+        }
+    }
+
+    @media (min-width: 767px) {
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 95%;
+            transform: translate(-50%, -50%);
+        }
+    }
 </style>
 
 <script>
@@ -78,8 +122,8 @@
                     </div>
                 </div>
             </nav>
-            <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 lg:hidden flex"
-                style="margin-top: -76px;">
+            <nav
+                class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 lg:hidden flex">
                 <div class="container flex flex-wrap items-center justify-between mx-auto">
                     <a href="https://school-tailwindcss.vercel.app/school.html" class="flex items-center">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
@@ -139,12 +183,12 @@
     </div>
     <div class="lg:pt-16"></div>
 
-    <h1 class="text-center text-5xl mt-20 mb-5 lg:pt-0 pt-12"><b>ADMISSION</b></h1>
-    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">Learn about our degrees and diplomas, and how to
-        apply to Manhattan School of Music!</h1>
-
-    <img src="https://www.msmnyc.edu/wp-content/uploads/2020/07/48931752423_ad940485a5_k-1.jpeg" alt="#ImgNotFound"
-        class="w-full max-h-[80vh]">
+    <div class="bgImage"></div>
+    <div class="content text-white">
+        <h1 class="text-center text-5xl mb-5 lg:mt-5"><b>ADMISSION</b></h1>
+        <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">Learn about our degrees and diplomas, and how
+            to apply to Manhattan School of Music!</h1>
+    </div>
 
     <h1 class="text-center text-4xl mt-20 mb-5 px-3"><b>College Degrees and Studies</b></h1>
     <div class="m-auto max-w-screen-xl px-3">
